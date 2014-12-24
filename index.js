@@ -31,7 +31,8 @@ format = require('es5-ext/string/format-method')({
 	Ss: function () { return String(abs(this.seconds)); },
 	Ls: function () { return String(abs(this.milliseconds)); },
 
-	sign: function () { return (this.to < this.from) ? '-' : ''; }
+	sign: function () { return (this.to < this.from) ? '-' : ''; },
+	alwaysSign: function () { return (this.to < this.from) ? '-' : '+'; }
 });
 
 getCalcData = function (duration) {
